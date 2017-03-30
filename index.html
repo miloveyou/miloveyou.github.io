@@ -313,7 +313,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/30/Markdown学习/" itemprop="url">
-                  未命名
+                  用Sublime配置Evernote实现Markdown功能
                 </a>
               
             
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T14:55:22+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T16:04:40+08:00">
                 2017-03-30
               </time>
             
@@ -367,46 +367,72 @@
       
         
           
-            <p>#本文完全引用别人博客，仅为个人学习之用，在这里非常感谢原作者的付出</p>
-<hr>
-<p>#Markdown的介绍</p>
-<hr>
-<p>  Markdown中一种语言，可以用于编写高质量的文章，语法简单易用。Markdown学习容易，功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台WordPress和大型CMS如何joomla、drupal都能很好的支持Markdown。</p>
-<p>Markdown的目标是实现「易读易写」</p>
-<ul>
-<li>可读性，无论如何，都是最重要的。一份使用Markdown格式，并且看起来不会像是由许多标签或是格式指令所构成。</li>
-<li>Markdown语法受到一些既有text-to-HTML格式的影响，包括Setext、atx、Textile、reStructuredText、Grutatext和EtText，而最大灵感来源其实是纯文本电子邮件的格式。</li>
+            <h1 id="用Sublime配置Evernote实现Markdown功能"><a href="#用Sublime配置Evernote实现Markdown功能" class="headerlink" title="用Sublime配置Evernote实现Markdown功能"></a>用Sublime配置Evernote实现Markdown功能</h1><p>前期使用马克飞象来实现印象笔记的Markdown功能，结果这两天专业试用期结束了，无法实现同步功能，弄的比较尴尬，所以就在网上找了些资料，来实现Evernote的Markdown功能。本来对于编程啥的，还是有些许胆怯，特别是开始的时候需要配置各种东西，比较烦。可是谁叫咱是个折腾的人呢，所以就研究了一下用Sublime配置Evernote实现Markdown功能。</p>
+<p>下面就是一句小白的配置教程，让你轻松的在Evernote上实现Markdown功能。</p>
+<h3 id="所需软件"><a href="#所需软件" class="headerlink" title="所需软件"></a>所需软件</h3><p><a href="https://www.sublimetext.com/" target="_blank" rel="external"><strong>Sublime text3</strong></a><br><a href="https://my.pcloud.com/publink/show?code=XZCPjdZPRcVHHYHLDJAoSyoa6dSYBi0X9y0" target="_blank" rel="external">搬运版</a></p>
+<blockquote>
+<p>说明：上面是官方正版，操作栏是英文的且需要注册。不注册的话也不影响使用，只是会不定期弹出一个提示窗口，建议可以的话可以入正。另，网上也有一些<a href="http://blog.csdn.net/wind520/article/details/52717070" target="_blank" rel="external">注册码</a>，经测试有效。另外推荐一个<a href="http://www.zdfans.com/4966.html" target="_blank" rel="external">绿色中文增强版</a>提供选择。</p>
+</blockquote>
+<h3 id="所需要的插件"><a href="#所需要的插件" class="headerlink" title="所需要的插件"></a>所需要的插件</h3><ul>
+<li>Package Controls</li>
+<li>Sublime-evernote</li>
+<li>Sublime Tmpl</li>
+<li>Markdown Editing</li>
+<li>Markdown Preview<blockquote>
+<p>说明：插件就是加载到Sublime中实现所需功能的东西。插件的具体安装方法风下文。</p>
+</blockquote>
+</li>
 </ul>
-<p>  总之，Markdown的语法全是由一些符号所组成的，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像“强调”。Markdown的列表看起来，嗯，就是列表。Markdown的区块引用看起来就真的像引用一段文字，就像你曾在电子邮件中见过的那样。</p>
-<p>#常用的几种语法</p>
-<hr>
-<p>  下面给出一个Markdown例子展示其基本语法。<br>Markdown源文件如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2140114-3ff29c070363dc48.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Markdown语法原始.jpg"></p>
-<p>经过CmdMarkdown渲染后效果如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2140114-508ec1a88e1f972b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Markdown语法效果.png"></p>
-<p>  Markdown本身只规定了基本语法，即从Markdown文本转换到HTML文件的规则，并没有规定生成文件的样式（CSS），因此，不同的引擎渲染得到的Markdown显示效果不尽相同，另外对于Markdown语法的支持也不完全一致。例如同样的上述代码，经过为知笔记的Markdown渲染之后的效果如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2140114-bdad38b96e28f722.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Markdown语法效果.jpg"></p>
-<hr>
-<hr>
-<p>#小结<br>  本文章主要是学习如何运用基本的Markdown语法，还要注意以下几个问题：</p>
-<ol>
-<li>插入图片的方法个人感觉比较奇怪，还有待查资料提高。</li>
-<li>在 Markdown 语言中，如何实现段首空格的显示？</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2140114-24f8593d796f67d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2016-06-03_203650.png"></p>
-<ol>
-<li>Markdown效果图中最后的我是粗体语法不对，那个语法应该是斜体。</li>
-<li>还有一些其它的问题，有待完善！</li>
-</ol>
-<hr>
-<p>本文特别感谢</p>
+<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><p>这一部分没有好说的，建议是安装官方正版，因为网上大部分教程都是按照官方正版的英文操作栏进行演示的，学习资源比较多。本文也将以官方正版为例进行讲解。</p>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><h4 id="安装Package-Controls插件"><a href="#安装Package-Controls插件" class="headerlink" title="安装Package Controls插件"></a>安装Package Controls插件</h4><p>使用代码安装此插件</p>
 <ul>
-<li><a href="http://www.paincker.com/author/jzj1993" target="_blank" rel="external">jzj1993</a>的<a href="http://www.paincker.com/markdown" target="_blank" rel="external">Markdown</a></li>
-<li><a href="http://xuyazhou.com/" target="_blank" rel="external">小帕</a>的<a href="http://xuyazhou.com/archives/112" target="_blank" rel="external">Markdown</a></li>
-<li><a href="http://wowubuntu.com/markdown/#editor" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></li>
+<li>在View的调出Show console</li>
+<li><p>复制下面的代码后回车，即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &apos;2915d1851351e5ee549c20394736b442&apos; + &apos;8bc59f460fa1548d1514676163dafc88&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启软件，即完成了这个插件的安装</p>
+</li>
 </ul>
-<p>  </p>
-
+<h4 id="安装Evernote插件"><a href="#安装Evernote插件" class="headerlink" title="安装Evernote插件"></a>安装Evernote插件</h4><p>把上面的插件安装好之后，其他的插件就都比较好安装了。</p>
+<ul>
+<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
+<li>输入install package，Enter进入插件安装界面</li>
+<li>输入evernote，Enter即可完成安装</li>
+</ul>
+<p>到此处，Evernote插件就安装完成了，接下来就是绑定你的账号，获取印象笔记应用授权。</p>
+<blockquote>
+<p>获取印象笔记应用授权的方法<br><a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="external">中国版印象笔记客户打开</a><br><a href="https://www.evernote.com/api/DeveloperToken.action" target="_blank" rel="external">国际版印象笔记客户打开</a><br>将 Evernote 网页中的 Developer Token 和 NoteStore URL 添加到 Sublime Evernote 插件的设置文件 Preferences &gt; Package Settings &gt; Evernote &gt; Settings - User：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;noteStoreUrl&quot;: &quot;你的 NoteStore URL&quot;,</span><br><span class="line"> &quot;token&quot;: &quot;你的 Developer Token&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>注意：</p>
+<ul>
+<li>token 是以S=开头的一串字符串</li>
+<li>noteStoreUrl 是一段 http 地址，你需要<strong>手动将https替换成http</strong></li>
+<li>保存设置文件（可能还需要重启你的Sublime Text）之后，尝试打开一个笔记以确保你的印象笔记能正常工作</li>
+</ul>
+<p>到此处印象笔记应用授权就结束了，接着就是验证一下就可以了。<br>验证方法：</p>
+<ul>
+<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
+<li>输入 Evernote，就会看见 Evernote 插件的许多命令</li>
+<li>点击 Evernote:list recent notes，如果看到罗列出最新的笔记，则说明授权成功。<blockquote>
+<p>参考：<a href="https://github.com/bordaigorl/sublime-evernote/wiki/First-Use#%E4%B8%AD%E5%9B%BD%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E7%94%A8%E6%88%B7appyinxiangcom" target="_blank" rel="external">sublime-evernote</a></p>
+</blockquote>
+</li>
+</ul>
+<p>好现在就已经可以使用印象笔记，但是为了有更好的体验，需要设置一些快捷键，因为默认的Evernote插件没有绑定任何快捷键，所有的操作都要通过ctrl + shift + p输入Evernote后选择相应功能进行。</p>
+<p>经网上查询，这样的配置比较方便记录。设置方法如下：<br> Preferences &gt; Key Bindings - User 关联快捷键<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#123; &quot;keys&quot;: [&quot;super+e&quot;], &quot;command&quot;: &quot;show_overlay&quot;, &quot;args&quot;: &#123;&quot;overlay&quot;: &quot;command_palette&quot;, &quot;text&quot;: &quot;Evernote: &quot;&#125; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+s&quot;], &quot;command&quot;: &quot;send_to_evernote&quot; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+o&quot;], &quot;command&quot;: &quot;open_evernote_note&quot; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+u&quot;], &quot;command&quot;: &quot;save_evernote_note&quot; &#125;,</span><br></pre></td></tr></table></figure></p>
+<p>上面代码的意思是：</p>
+<ul>
+<li>先按 ctrl+e, 再按ctrl+s 后，会将笔记保存并且同步到印象笔记</li>
+<li>先按 ctrl+e, 再按ctrl+o 后，会打开笔记列表，然后就可以打开想要的笔记</li>
+<li>先按 ctrl+e, 再按ctrl+u 后，会更新笔记到原位置</li>
+</ul>
+<h4 id="安装其他三个插件"><a href="#安装其他三个插件" class="headerlink" title="安装其他三个插件"></a>安装其他三个插件</h4><p>这三个插件的安装方法与Evernote的安装类似</p>
+<ul>
+<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
+<li>输入install package，Enter进入插件安装界面</li>
+<li>输入<code>插件名</code>，Enter即可完成安装</li>
+</ul>
+<h4 id="配置Markdown"><a href="#配置Markdown" class="headerlink" title="配置Markdown"></a>配置Markdown</h4>
           
         
       
