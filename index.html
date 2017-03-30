@@ -290,7 +290,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/30/Markdown学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/30/hello-world-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -312,8 +312,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/30/Markdown学习/" itemprop="url">
-                  用Sublime配置Evernote实现Markdown功能
+                <a class="post-title-link" href="/2017/03/30/hello-world-1/" itemprop="url">
+                  hello-world
                 </a>
               
             
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T16:04:40+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T16:54:17+08:00">
                 2017-03-30
               </time>
             
@@ -367,201 +367,7 @@
       
         
           
-            <h1 id="用Sublime配置Evernote实现Markdown功能"><a href="#用Sublime配置Evernote实现Markdown功能" class="headerlink" title="用Sublime配置Evernote实现Markdown功能"></a>用Sublime配置Evernote实现Markdown功能</h1><p>前期使用马克飞象来实现印象笔记的Markdown功能，结果这两天专业试用期结束了，无法实现同步功能，弄的比较尴尬，所以就在网上找了些资料，来实现Evernote的Markdown功能。本来对于编程啥的，还是有些许胆怯，特别是开始的时候需要配置各种东西，比较烦。可是谁叫咱是个折腾的人呢，所以就研究了一下用Sublime配置Evernote实现Markdown功能。</p>
-<p>下面就是一句小白的配置教程，让你轻松的在Evernote上实现Markdown功能。</p>
-<h3 id="所需软件"><a href="#所需软件" class="headerlink" title="所需软件"></a>所需软件</h3><p><a href="https://www.sublimetext.com/" target="_blank" rel="external"><strong>Sublime text3</strong></a><br><a href="https://my.pcloud.com/publink/show?code=XZCPjdZPRcVHHYHLDJAoSyoa6dSYBi0X9y0" target="_blank" rel="external">搬运版</a></p>
-<blockquote>
-<p>说明：上面是官方正版，操作栏是英文的且需要注册。不注册的话也不影响使用，只是会不定期弹出一个提示窗口，建议可以的话可以入正。另，网上也有一些<a href="http://blog.csdn.net/wind520/article/details/52717070" target="_blank" rel="external">注册码</a>，经测试有效。另外推荐一个<a href="http://www.zdfans.com/4966.html" target="_blank" rel="external">绿色中文增强版</a>提供选择。</p>
-</blockquote>
-<h3 id="所需要的插件"><a href="#所需要的插件" class="headerlink" title="所需要的插件"></a>所需要的插件</h3><ul>
-<li>Package Controls</li>
-<li>Sublime-evernote</li>
-<li>Sublime Tmpl</li>
-<li>Markdown Editing</li>
-<li>Markdown Preview<blockquote>
-<p>说明：插件就是加载到Sublime中实现所需功能的东西。插件的具体安装方法风下文。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><p>这一部分没有好说的，建议是安装官方正版，因为网上大部分教程都是按照官方正版的英文操作栏进行演示的，学习资源比较多。本文也将以官方正版为例进行讲解。</p>
-<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><h4 id="安装Package-Controls插件"><a href="#安装Package-Controls插件" class="headerlink" title="安装Package Controls插件"></a>安装Package Controls插件</h4><p>使用代码安装此插件</p>
-<ul>
-<li>在View的调出Show console</li>
-<li><p>复制下面的代码后回车，即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &apos;2915d1851351e5ee549c20394736b442&apos; + &apos;8bc59f460fa1548d1514676163dafc88&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启软件，即完成了这个插件的安装</p>
-</li>
-</ul>
-<h4 id="安装Evernote插件"><a href="#安装Evernote插件" class="headerlink" title="安装Evernote插件"></a>安装Evernote插件</h4><p>把上面的插件安装好之后，其他的插件就都比较好安装了。</p>
-<ul>
-<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
-<li>输入install package，Enter进入插件安装界面</li>
-<li>输入evernote，Enter即可完成安装</li>
-</ul>
-<p>到此处，Evernote插件就安装完成了，接下来就是绑定你的账号，获取印象笔记应用授权。</p>
-<blockquote>
-<p>获取印象笔记应用授权的方法<br><a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="external">中国版印象笔记客户打开</a><br><a href="https://www.evernote.com/api/DeveloperToken.action" target="_blank" rel="external">国际版印象笔记客户打开</a><br>将 Evernote 网页中的 Developer Token 和 NoteStore URL 添加到 Sublime Evernote 插件的设置文件 Preferences &gt; Package Settings &gt; Evernote &gt; Settings - User：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;noteStoreUrl&quot;: &quot;你的 NoteStore URL&quot;,</span><br><span class="line"> &quot;token&quot;: &quot;你的 Developer Token&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>注意：</p>
-<ul>
-<li>token 是以S=开头的一串字符串</li>
-<li>noteStoreUrl 是一段 http 地址，你需要<strong>手动将https替换成http</strong></li>
-<li>保存设置文件（可能还需要重启你的Sublime Text）之后，尝试打开一个笔记以确保你的印象笔记能正常工作</li>
-</ul>
-<p>到此处印象笔记应用授权就结束了，接着就是验证一下就可以了。<br>验证方法：</p>
-<ul>
-<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
-<li>输入 Evernote，就会看见 Evernote 插件的许多命令</li>
-<li>点击 Evernote:list recent notes，如果看到罗列出最新的笔记，则说明授权成功。<blockquote>
-<p>参考：<a href="https://github.com/bordaigorl/sublime-evernote/wiki/First-Use#%E4%B8%AD%E5%9B%BD%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E7%94%A8%E6%88%B7appyinxiangcom" target="_blank" rel="external">sublime-evernote</a></p>
-</blockquote>
-</li>
-</ul>
-<p>好现在就已经可以使用印象笔记，但是为了有更好的体验，需要设置一些快捷键，因为默认的Evernote插件没有绑定任何快捷键，所有的操作都要通过ctrl + shift + p输入Evernote后选择相应功能进行。</p>
-<p>经网上查询，这样的配置比较方便记录。设置方法如下：<br> Preferences &gt; Key Bindings - User 关联快捷键<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#123; &quot;keys&quot;: [&quot;super+e&quot;], &quot;command&quot;: &quot;show_overlay&quot;, &quot;args&quot;: &#123;&quot;overlay&quot;: &quot;command_palette&quot;, &quot;text&quot;: &quot;Evernote: &quot;&#125; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+s&quot;], &quot;command&quot;: &quot;send_to_evernote&quot; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+o&quot;], &quot;command&quot;: &quot;open_evernote_note&quot; &#125;,</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+u&quot;], &quot;command&quot;: &quot;save_evernote_note&quot; &#125;,</span><br></pre></td></tr></table></figure></p>
-<p>上面代码的意思是：</p>
-<ul>
-<li>先按 ctrl+e, 再按ctrl+s 后，会将笔记保存并且同步到印象笔记</li>
-<li>先按 ctrl+e, 再按ctrl+o 后，会打开笔记列表，然后就可以打开想要的笔记</li>
-<li>先按 ctrl+e, 再按ctrl+u 后，会更新笔记到原位置</li>
-</ul>
-<h4 id="安装其他三个插件"><a href="#安装其他三个插件" class="headerlink" title="安装其他三个插件"></a>安装其他三个插件</h4><p>这三个插件的安装方法与Evernote的安装类似</p>
-<ul>
-<li>ctrl + shift + p 打开 Sublime Text 命令窗口</li>
-<li>输入install package，Enter进入插件安装界面</li>
-<li>输入<code>插件名</code>，Enter即可完成安装</li>
-</ul>
-<h4 id="配置Markdown"><a href="#配置Markdown" class="headerlink" title="配置Markdown"></a>配置Markdown</h4>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/29/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dragon-lan">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
             
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/29/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-29T10:54:40+08:00">
-                2017-03-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
           
         
       
@@ -640,7 +446,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
